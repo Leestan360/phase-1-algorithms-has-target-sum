@@ -1,5 +1,24 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  // for (const num1 of array) {
+  //   for (const num2 of array) {
+  //     let totalSumOfNumbers = num1 + num2;
+  //     if (totalSumOfNumbers === target) {
+  //       return true;
+  //     }
+  //   }
+  //   return false;
+  // }
+  // return false;
+  for (let i = 0; i < array.length; i++) {
+    const number = target - array[i];
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[j] === number) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
 /* 
@@ -8,6 +27,15 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+
+  declare two variables
+  loop through the array to check if the first variable is there
+    loop through the array to check if the first variable is there
+      add the two variables
+      if their sum is equal to the target
+        return true
+      else
+        return false
 */
 
 /*
